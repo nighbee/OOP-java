@@ -11,6 +11,6 @@ public class StudentTest {
         System.out.println("Year of Study: " + student.getYearOfStudy());
         
         
-        // student.incrementYearOfStudy();
+        student.incrementYearOfStudy();
 	}
 }
