@@ -1,10 +1,10 @@
 package oop.prac2;
 
-class Tme {
+public class Time implements Comparable<Time>{
 	private int hour; 
 	private int minute; 
 	private int second;
-	public Tme(int hour, int minute, int second) {
+	public Time(int hour, int minute, int second) {
         setTme(hour, minute, second);
 	}
 	
@@ -25,7 +25,7 @@ class Tme {
 		int standartHour = ( hour==0 || hour ==12)? 12: hour %12; 
 		return String.format("%02d:%02d:%02d %s", standartHour, minute, second, period); 
 	}
-	public void add(Tme otherTme) { 
+	public void add(Time otherTme) { 
 		int newHour = hour + otherTme.hour;
 		int newMinute= minute+ otherTme.minute; 
 		int newSecond= second + otherTme.second; 
@@ -42,5 +42,21 @@ class Tme {
 		}
 		setTme(newHour, newMinute, newSecond);
 	}
+	
+	@Override
+    public String toString() {
+        return String.format("%02d:%02d", hour, minute);
+    }
+	
+	
+	@Override
+    public int compareTo(Time other) {
+        int hourComparison = Integer.compare(this.hour, other.hour);
+        if (hourComparison != 0) {
+            return hourComparison;
+        } else {
+            return Integer.compare(this.minute, other.minute);
+        }
+    }
 } 
 

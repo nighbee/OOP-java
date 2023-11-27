@@ -1,0 +1,39 @@
+interface vs abstract class
+interface: collection of field constants and method signatures 
+that will be overridden by interface implementing classes
+	
+abs class: no restrictions on field and method modifiers
+
+pros of interface: 1) multiple implementation 
+EX: public class Robot implements Moveable, Rotatable {
+	@Override
+	public void move() { 
+		System.out.println("moving to spot"); 
+	}
+	
+	@Override 
+	public void rotate() { 
+		System.out.println("Rotating head to X degree");
+	}
+}
+2) unrelated behaviour of diff classes
+EX: everyone can move so main interface will be move
+
+use case of abs class: 
+1)common implementation of common behaviour of related classes 
+EX: public abstract class Shape {
+    // Common fields
+    protected String color;
+
+    // Abstract method
+    public abstract double calculateArea();
+
+    // Concrete method
+    public void setColor(String color) {
+        this.color = color;
+    }
+}
+2) default implementation for some methods: 
+EX: permetr of shaper can be defined as: 
+	public abstract double calculatePerimeter(); 
+	and then impplement it in class itself 
