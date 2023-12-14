@@ -1,0 +1,75 @@
+	1st: public class cat\do\mouse 
+	public inteface animal 
+	pulbic abstract animal 
+	2: public class cat{ 
+		String name; 
+		int age; 
+		public cat(){}
+		public cat(String name, int age){
+			this.name=name; 
+			this.age=age;
+			} 
+		public void setName(){ 
+			this.name=name;} 
+		public void setAge(){ 
+			this.age=age;
+			} 
+		public string getName(){
+			return naem; }
+		public int getAge(){
+			return age; }
+		public void clone(){ 
+			return(Cat) super.clone(); 
+		} 
+	} 
+
+3) public abstract shape{
+	public void calculateArea(); 
+	} 
+	public class circle{
+	int rad; 
+	@Override
+	public void calculateArea(int rad ){
+		return area ;
+	}
+	//overload 
+	public void calculateArea(int diagonal){ 
+		return area; 
+	} 
+	}
+
+4) 
+
+5)   public class Student implements Comparable<Student> {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getters and Setters
+
+    @Override
+    public int compareTo(Student other) {
+        return this.name.compareTo(other.name);
+    }
+
+    public static Comparator<Student> AgeComparator = new Comparator<Student>() {
+        @Override
+        public int compare(Student student1, Student student2) {
+            return Integer.compare(student1.age, student2.age);
+        }
+    };
+}
+
+6) dependency is about a car depend on a fuel object? car recieves fuel as a parametr 
+	aggregation uni has a several edpartmants? and have a list with department objects 
+	composition a house consist of rooms? so it contains collection of room objects 
+	generalization is a cat and dog inherit from the animal abstract class or interface 
+	realization is a employy implements a payable interface and its methods 
+7) singlelton is when we need to create only one instance of object 
+	factory when we need to create object wthout sceifiying its exact class 
+	decorator is like adding new functionality to existing objects 
+	
